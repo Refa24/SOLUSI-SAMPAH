@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5DA6A7;
+}
+.navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+    font-size: 16px;
+}
+.navbar .buttons {
+    display: flex;
+    align-items: center;
+}
+.navbar .buttons button {
+    background-color: #6fcf97;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .buttons button:hover {
+    background-color: #6fcf97;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-box input[type="checkbox"] {
+    margin-right: 10px;
+}
+.login-box button {
+    background-color: #6fcf97;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.login-box button:hover {
+    background-color: #6fcf97;
+}
+.login-box .social-icons {
+    margin-top: 20px;
+}
+.login-box .social-icons i {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
