@@ -1,2 +1,0 @@
-# Refa
-Semangat Kawan
