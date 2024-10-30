@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solusi Sampah Kita</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .button {
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .lapor-btn {
+        background-color: #4caf50;
+      }
+
+      .login-btn {
+        background-color: #80c2af;
+      }
+
+      .content {
+        display: none; /* Sembunyikan semua konten secara default */
+        padding: 50px;
+      }
+
+      .active {
+        display: block; /* Tampilkan konten aktif */
+      }
+
+      /* Tambahan gaya untuk konten */
+      .about-box,
+      .education-box,
+      .report-box {
+        background-color: #4caf50;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px;
+        color: white;
+      }
+
+      .inner-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        color: black;
+        margin-top: 20px;
+      }
+
+      .video-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .video-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 30%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="profile-icon">
+        <img
+          src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Clipart.png"
+          alt="Profile"
+          width="30"
+          height="30"
+        />
+      </div>
+      <div class="nav">
+        <a onclick="showContent('home')">Beranda</a>
+        <a onclick="showContent('education')">Edukasi</a>
+        <a onclick="showContent('report')">Laporkan Sampah</a>
+        <a onclick="showContent('about')">Tentang Kami</a>
+      </div>
+      <div class="buttons">
+        <button class="button lapor-btn" onclick="showContent('report')">
+          Laporkan Sampah
+        </button>
+        <button class="button login-btn">Login</button>
+      </div>
+    </div>
+
+    <!-- Beranda -->
+    <div id="home" class="content active">
+      <h1>SOLUSI<br />SAMPAH<br />KITA</h1>
+      <p>
+        Solusi Sampah Kita adalah Website yang memudahkan Anda untuk melaporkan
+        tumpukan sampah di lingkungan Anda agar segera ditangani oleh dinas
+        kebersihan.
+      </p>
+      <img
+        src="https://png.pngtree.com/png-clipart/20230825/original/pngtree-cartoon-little-throws-rubbish-in-garbage-bin-picture-image_8652301.png"
+        alt="Illustrasi Sampah"
+        style="max-width: 250px"
+      />
+    </div>
+
+    <!-- Edukasi -->
+    <div id="education" class="content">
+      <div class="education-box">
+        <h2>
+          Pelajari lebih lanjut tentang dampak sampah bagi lingkungan dan cara
+          mengelola sampah dengan benar.
+        </h2>
+      </div>
+      <div class="inner-box">
+        <h3>Video Edukasi</h3>
+        <div class="video-container">
+          <div class="video-box">
+            <p>
+              <a
+                href="https://youtu.be/1U-52FMZa7g?si=LhMOz4TDNhFhWOCp"
+                target="_blank"
+                >Mengelola Sampah 101</a
+              >
+            </p>
+          </div>
+          <div class="video-box">
+            <p>
+              <a
+                href="https://youtu.be/CGd3lgxReFE?si=z5C3PlO3uJ_Dordz"
+                target="_blank"
+                >Cara Daur Ulang Sampah</a
+              >
+            </p>
+          </div>
+          <div class="video-box">
+            <p>
+              <a
+                href="https://youtu.be/WI4pRrTDhUs?si=cAq5Z2P_gjlOUmCl"
+                target="_blank"
+                >Manfaat Mengurangi Sampah</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Laporkan Sampah -->
+    <div id="report" class="content">
+      <div class="report-box">
+        <div class="inner-box">
+          <h2>Isi formulir berikut untuk melaporkan sampah</h2>
+          <form action="laporkan.php" method="post">
+            <div class="form-group">
+              <label for="nama">Nama:</label>
+              <input type="text" id="nama" name="nama" required />
+            </div>
+            <div class="form-group">
+              <label for="lokasi">Lokasi Sampah:</label>
+              <input
+                type="text"
+                id="lokasi"
+                name="lokasi"
+                placeholder="Masukkan alamat"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="deskripsi">Deskripsi:</label>
+              <textarea
+                id="deskripsi"
+                name="deskripsi"
+                rows="4"
+                placeholder="Jelaskan kondisi sampah"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="report-btn">Laporkan Sampah</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tentang Kami -->
+    <div id="about" class="content">
+      <div class="about-box">
+        <div class="inner-box">
+          <h2>Tentang Kami</h2>
+          <p>
+            Website ini dibangun untuk memfasilitasi masyarakat dalam melaporkan
+            tumpukan sampah dengan mudah dan cepat.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showContent(contentId) {
+        // Sembunyikan semua konten
+        var contents = document.querySelectorAll(".content");
+        contents.forEach(function (content) {
+          content.classList.remove("active");
+        });
+
+        // Tampilkan konten yang dipilih
+        document.getElementById(contentId).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
